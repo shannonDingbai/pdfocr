@@ -13,3 +13,10 @@ pip install modelscope
 modelscope download --model OpenGVLab/InternVL3-2B-Instruct --local_dir ./OpenGVLab/InternVL3-2B-Instruct
 lmdeploy serve api_server OpenGVLab/InternVL3-2B-Instruct --backend turbomind --server-port 23333 --tp 1 --chat-template internvl2_5
 ```
+
+
+### 文本格式
+```
+pip install openai python-docx -i https://mirrors.aliyun.com/pypi/simple/
+
+```
