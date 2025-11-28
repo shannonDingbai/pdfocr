@@ -1,0 +1,37 @@
+{
+  "H1": {
+    "tag": "【H1】",
+    "font_name": "微软雅黑",
+    "font_size": 22,
+    "bold": true,
+    "space_after": 12,
+    "alignment": "CENTER"
+  },
+  "H2": {
+    "tag": "【H2】",
+    "font_name": "微软雅黑",
+    "font_size": 15,
+    "bold": true,
+    "space_after": 8,
+    "alignment": "LEFT"
+  },
+  "P": {
+    "tag": "【P】",
+    "font_name": "宋体",
+    "font_size": 12,
+    "bold": false,
+    "first_line_indent": 24,
+    "line_spacing": 1.5,
+    "space_after": 0,
+    "alignment": "JUSTIFY"
+  },
+  "TABLE": {
+    "tag_start": "【TABLE】",
+    "tag_end": "【/TABLE】",
+    "cell_font_name": "宋体",
+    "cell_font_size": 11,
+    "cell_alignment": "CENTER",
+    "header_bold": true,
+    "header_bg_color": "#E6E6FA"  
+  }
+}
