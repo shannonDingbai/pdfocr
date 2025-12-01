@@ -1,0 +1,79 @@
+{
+  "H1": {"alignment": "LEFT", "font_name": "微软雅黑", "font_size": 22, "bold": true, "space_after": 12, "tag": "【H1】"},
+  "H2": {"alignment": "LEFT", "font_name": "微软雅黑", "font_size": 15, "bold": true, "space_after": 8, "tag": "【H2】"},
+  "H3": {"alignment": "LEFT", "font_name": "宋体", "font_size": 13, "bold": false, "space_after": 6, "tag": "【H3】"},
+  "P": {"alignment": "JUSTIFY", "font_name": "宋体", "font_size": 12, "bold": false, "space_after": 0, "first_line_indent": 24, "line_spacing": 1.5, "tag": "【P】"},
+  "TABLE": {"cell_alignment": "CENTER", "cell_font_name": "宋体", "cell_font_size": 11, "header_bold": true, "header_bg_color": "E6E6FA", "row_height": 20, "tag_start": "【TABLE】", "tag_end": "【/TABLE】"},
+  "TOC": {"title": "目录", "title_font": "微软雅黑", "title_size": 22, "title_bold": true, "toc1_font": "微软雅黑", "toc1_size": 12, "toc1_bold": true, "toc2_font": "微软雅黑", "toc2_size": 12, "toc2_bold": false, "toc3_font": "宋体", "toc3_size": 12, "toc3_bold": false},
+  "PROMPT": {
+    "format_rules": [
+      "⚠️ 输出格式为核心要求，必须100%遵守：",
+      "1. 输出内容：仅包含一个JSON数组，无任何其他文字、符号、注释、换行、markdown标记",
+      "2. JSON数组元素格式：",
+      "   - 一级标题：{\"type\":\"H1\",\"content\":\"标题内容（如：1. 执行摘要）\"}",
+      "   - 二级标题：{\"type\":\"H2\",\"content\":\"标题内容（如：3.1 安防）\"}",
+      "   - 三级标题：{\"type\":\"H3\",\"content\":\"标题内容（如：3.1.1 市场规模）\"}",
+      "   - 正文段落：{\"type\":\"正文\",\"content\":\"正文内容（完整、连贯的文本）\"}",
+      "   - 表格内容：{\"type\":\"TABLE\",\"content\":\"表格行1|表格行2|...\\n---|---|---\\n内容1|内容2|...\"}",
+      "3. JSON示例（可直接被Python json.loads解析）：",
+      "   [",
+      "     {\"type\":\"H1\",\"content\":\"1. 执行摘要\"},",
+      "     {\"type\":\"正文\",\"content\":\"AI自动化办公可显著提升企业文档处理效率，降低人力成本。\"},",
+      "     {\"type\":\"H1\",\"content\":\"3. 各维度深度分析\"},",
+      "     {\"type\":\"H2\",\"content\":\"3.1 安防\"},",
+      "     {\"type\":\"H2\",\"content\":\"3.2 能耗\"}",
+      "   ]"
+    ],
+    "title_levels": [  
+      {
+        "level": "H1",
+        "name": "一级标题",
+        "examples": [  
+          "1. 执行摘要",
+          "2. 总览概览（关键指标）",
+          "3. 各维度深度分析",
+          "4. 综合评估 & 趋势预测",
+          "5. 风险识别 & 应对策略",
+          "6. 落地建议 & 资源规划",
+          "7. 附录"
+        ]
+      },
+      {
+        "level": "H2",
+        "name": "二级标题",
+        "examples": [
+          "3.1 安防",
+          "3.2 能耗",
+          "3.3 通行（门禁）"
+        ]
+      },
+      {
+        "level": "H3",
+        "name": "三级标题",
+        "examples": [
+          "3.1.1 安防系统选型",
+          "3.1.2 安防实施成本"
+        ]
+      }
+    ],
+    "paragraph_example": "自动化办公可显著提升企业文档处理效率，降低人力成本，尤其在批量生成标准化报告场景下优势明显。",
+    "table_rule": {
+      "note": "列用|分隔，表头下加---分隔，示例如下：",
+      "examples": [
+        "功能模块|工具选型|适用场景|实施成本",
+        "---|---|---|---",
+        "Word生成|python-docx|办公自动化|低",
+        "PDF解析|PyPDF2|文档处理|中",
+        "Excel编辑|OpenPyXL|数据报表|低"
+      ]
+    },
+    "requirements": {
+      "h1_min_count": 7,
+      "h2_min_count": 1,
+      "h2_mandatory_title": "3. 各维度深度分析",
+      "h3_min_count_under_h2": 8,
+      "table_min_count": 1,
+      "output_rule": "输出必须为JSON数组，格式示例：[{\"type\":\"H1\",\"content\":\"xxxxxxxxxx\"}, {\"type\":\"正文\",\"content\":\"xxxxx\"}, ...]，仅保留此JSON数据，无多余解释、注释或换行"
+    }
+  }
+}
